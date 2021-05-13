@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="logo">front<span>_test</span></div>
+    <h1 class="main-header">Тестовое задание</h1>
+    <p class="header-text">Сверстайте эту страницу включая интерактивные элементы.</p>
+  </header>
+
+  <main>
+    <div class="grid">
+      <div class="column column-1">
+        <div class="canvas" id="canvas"></div>
+        <p class="column-info">Анимация: вращение вокруг своей оси автоматически, или с реакцией на мышку.</p>
+        
+      </div>
+      <!-- column-1 -->
+      <div class="column column-2">
+        <div class="card-interactive__wrapper">
+          
+          <img class="birds-left" src="images/birds-left.png" alt="birds">
+          <div class="card card-interactive">
+            <img src="images/infinity.png" alt="infinity symbol" class="card-interactive__infinity">
+            <div class="card-interactive__header">Интерактивная карточка</div>
+            <div class="card-interactive__description">Должна вращаться за мышкой</div>
+            <button type="button" class="card__btn"><span>Кнопка</span></button>
+          </div>
+          <img class="birds-right" src="images/birds-right.png" alt="birds">
+          
+        </div> 
+        <!-- card-interactive -->
+        <p class="column-info">Анимация: карточка отклоняется по направлению к курсору. Верхний и нижний слой с птицами
+          повторяет движение карточки с легким параллаксом.</p>
+      </div>
+      <!-- column-2 -->
+      <div class="column column-3">
+        <div class="card card-form">
+          <div class="card-form__header">Форма</div>
+          <div class="card-form__description">Дополнительный текст ⏳</div>
+          <form class="form">
+            <select class="hidden" name="something" id="smth">
+              <option value=""></option>
+              <option value="1">Выбор1</option>
+              <option value="2">Выбор2</option>
+              <option value="3">Выбор3</option>
+              <option value="4">Выбор4</option>
+              <option value="5">Выбор5</option>
+            </select>
+            <div class="form__select-container">
+              <span class="form__select-small ">Выбор чего-то</span>
+              <div class="form__input form__select-header">Выбор чего-то *</div>
+              <ul class="form__select">
+                <li class="form__select-option">Выбор1</li>
+                <li class="form__select-option">Выбор2</li>
+                <li class="form__select-option">Выбор3</li>
+                <li class="form__select-option">Выбор4</li>
+                <li class="form__select-option">Выбор5</li>
+              </ul>
+            </div>
+            <input class="form__input form__phone" type="tel" name="phone" placeholder="Номер телефона *">
+            <div class="form__text">
+              <span class="form__text-small">Коротоко о чём-то</span>
+              <textarea class="form__input form__textarea" rows="1" name="text"
+                placeholder="Коротко о чем-то ещё"></textarea>
+            </div>
+            <div class="form__file">
+              <input type="file" class="hidden" id="input-file" name="files[]" multiple accept="image">
+              <div class="add-file__wrapper" >
+                <label class="input-file__wrapper" for="input-file">
+                  <div class="file__trigger"><img src="images/file.png" alt="paperclip"></div>
+                  <div class="file__addfile">Прикрепить файл</div>
+                </label>
+
+                  <div class="add-file__right">                 
+                </div>
+                
+              </div>
+            </div>
+
+            <button type="submit" class="card__btn"><span>Кнопка</span></button>            
+          </form>
+        </div>
+        <!-- card-form -->
+        <p class="column-info">Сверстать форму с учетом всех состояний.</p>
+      </div>
+      <!-- column-3 -->
+      <div class="column column-4">
+        <div class="card card-tabs">
+          <div class="card-tabs__btn">
+            <span class="tab-active">1</span>
+            <span>2</span>
+            <span>3</span>
+          </div>
+          <div class="content-wrapper">
+
+            <div class="card-content__block">
+              <div class="content__header header--active">Заголовок 1</div>
+              <div class="content__text-wrapper text-active"><p class="content__text">Какой-то текст про очень важные вещи о которых нужно было написать внутри этих табов.</p></div>
+            </div>
+            <div class="card-content__block">
+              <div class="content__header">Заголовок 2</div>
+              <div class="content__text-wrapper">
+                <p class="content__text">Какой-то текст про очень важные вещи о которых нужно было написать внутри этих
+                  табов.</p>
+              </div>
+            </div>
+            <div class="card-content__block">
+              <div class="content__header">Заголовок 3</div>
+              <div class="content__text-wrapper">
+                <p class="content__text">Какой-то текст про очень важные вещи о которых нужно было написать внутри этих
+                  табов.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="column-info">Сверстать табы</p>
+      </div>
+      <!-- card-content -->
+      <!-- card-tabs -->
+      
+      </div>
+      <!-- column-4-->
+    </div>
+  </main>
+
+
+  <script src="scripts/three.js"></script>
+  <script src="scripts/gtflloader.js"></script>
+  <script src="scripts/OrbitControls.js"></script>
+  <script src="scripts/autosize.min.js"></script>
+  <script src="scripts/main.js"></script>
+</body>
+
+</html>
