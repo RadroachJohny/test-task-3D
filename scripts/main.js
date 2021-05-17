@@ -201,8 +201,6 @@ document.addEventListener('DOMContentLoaded', () => {
           birdsRight = document.querySelector('.birds-right');
 
     column.addEventListener('mousemove', (e) => {
-      // console.log(container.getBoundingClientRect().left);
-      // console.log(e.pageX);
       let xAxis = (e.pageX - (column.getBoundingClientRect().left + (column.clientWidth / 2))) / 20;     
       let yAxis = ( (column.offsetTop + (column.clientHeight / 2)) - e.pageY) / 15;     
       // let xAxis = (window.innerWidth / 2 - e.pageX) / 15;
